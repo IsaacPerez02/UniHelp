@@ -4,11 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.forEach(link => {
         link.addEventListener('click', event => {
             event.preventDefault();
-            if (link.classList.contains('nav-link')) {
-                const target = link.getAttribute('href');
-                window.location.href = target;
-            }
+            const target = event.target.getAttribute('href');
+            window.location.href = target;
         });
     });
 });
-
