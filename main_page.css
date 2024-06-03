@@ -102,6 +102,15 @@ header button {
     cursor: pointer;
 }
 
+.logout-button {
+    background-color: red; /* Set background color to red */
+    color: white; /* Set text color to white for contrast */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Indicate clickable area */
+  }
+  
 header .user-info {
     display: flex;
     align-items: center;
