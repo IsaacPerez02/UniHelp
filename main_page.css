@@ -75,8 +75,9 @@ body {
     margin-left: 200px;
     margin-right: 200px;
     padding: 20px;
-    overflow-y: auto;
-}
+    overflow: hidden; /* Remove scrollbar */
+  }
+  
 
 header {
     display: flex;
