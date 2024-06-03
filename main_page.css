@@ -75,8 +75,15 @@ body {
     margin-left: 200px;
     margin-right: 200px;
     padding: 20px;
-    overflow: hidden; /* Remove scrollbar */
-  }
+    overflow-y: auto; /* Default scrollbar for all devices */
+}
+      
+@media (min-width: 768px) { /* Hide scrollbar on screens wider than 768px (desktops) */
+    .main-content {
+      overflow-y: hidden; /* Hide scrollbar */
+    }
+}      
+      
   
 
 header {
