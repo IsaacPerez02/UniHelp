@@ -30,7 +30,7 @@
                 <button>Activate Premium</button>
             </div>
         </aside>
-        
+
         <main class="main-content">
             <header>
                 <input type="text" placeholder="Search">
@@ -97,10 +97,9 @@
                 </div>
             </section>
         </main>
-        
+
         <aside class="sidebar right-sidebar">
             <div class="profile-summary">
-                <button class="close-profile-summary">&times;</button>
                 <div class="profile-header">
                     <img src="images/profile-picture.jpg" alt="Profile Picture" class="profile-picture">
                     <h2>Julia Grey</h2>
@@ -152,19 +151,6 @@
                 initialView: 'dayGridMonth'
             });
             calendar.render();
-
-            // Handle profile summary toggle
-            const profileSummaryToggle = document.querySelector('.profile-summary-toggle');
-            const profileSummary = document.querySelector('.profile-summary');
-            const closeProfileSummary = document.querySelector('.close-profile-summary');
-
-            profileSummaryToggle.addEventListener('click', () => {
-                profileSummary.classList.toggle('open');
-            });
-
-            closeProfileSummary.addEventListener('click', () => {
-                profileSummary.classList.remove('open');
-            });
         });
     </script>
 </body>
