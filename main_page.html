@@ -9,16 +9,10 @@
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js'></script>
     <script defer src="main_page.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        #calendar {
-            max-width: 500px; /* Ajusta el tamaño máximo del calendario */
-            margin: 0 auto; /* Centra el calendario horizontalmente */
-        }
-    </style>
 </head>
 <body>
     <div class="container">
-        <aside class="sidebar">
+        <aside class="sidebar left-sidebar">
             <div class="logo">
                 <img src="images/logo.png" alt="UniHelp Logo" class="logo-image">
                 <span>UniHelp</span>
@@ -36,13 +30,13 @@
                 <button>Activate Premium</button>
             </div>
         </aside>
+        
         <main class="main-content">
             <header>
                 <input type="text" placeholder="Search">
                 <button class="new-entry">New Entry</button>
                 <div class="user-info">
-                    <span class="username">Julie Grey</span>
-                    <button class="profile-summary-toggle">Profile</button>
+                    <span class="username"></span>
                     <button class="logout">Logout</button>
                 </div>
             </header>
@@ -103,44 +97,49 @@
                 </div>
             </section>
         </main>
-        <aside class="profile-summary">
-            <button class="close-profile-summary">&times;</button>
-            <div class="profile-header">
-                <img src="images/profile-picture.png" alt="Profile Picture" class="profile-picture">
-                <h2>Julie Grey</h2>
-                <p>Chief Editor</p>
-            </div>
-            <div class="profile-stats">
-                <div class="stat">
-                    <i class="fas fa-file-alt"></i>
-                    <span>126 Articles</span>
+        
+        <aside class="sidebar right-sidebar">
+            <div class="profile-summary">
+                <button class="close-profile-summary">&times;</button>
+                <div class="profile-header">
+                    <img src="images/profile-picture.jpg" alt="Profile Picture" class="profile-picture">
+                    <h2>Julia Grey</h2>
+                    <p>Chief Editor</p>
                 </div>
-                <div class="stat">
-                    <i class="fas fa-star"></i>
-                    <span>1.37K Reviews</span>
-                </div>
-            </div>
-            <div class="latest-alerts">
-                <h2>Latest Alerts</h2>
-                <div class="alert-item">
-                    <img src="images/alert1.png" alt="Alert">
-                    <div>
-                        <h3>Calculus</h3>
-                        <p>5 new questions</p>
+                <div class="profile-stats">
+                    <div class="stat">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Articles</span>
+                        <span>126</span>
+                    </div>
+                    <div class="stat">
+                        <i class="fas fa-star"></i>
+                        <span>Reviews</span>
+                        <span>1.37K</span>
                     </div>
                 </div>
-                <div class="alert-item">
-                    <img src="images/alert2.png" alt="Alert">
-                    <div>
-                        <h3>Probability</h3>
-                        <p>3 new questions</p>
+                <div class="latest-alerts">
+                    <h2>Latest Alerts</h2>
+                    <div class="alert-item">
+                        <img src="images/alert1.png" alt="Alert Image">
+                        <div>
+                            <h3>Calculus</h3>
+                            <p>5 hours ago</p>
+                        </div>
                     </div>
-                </div>
-                <div class="alert-item">
-                    <img src="images/alert3.png" alt="Alert">
-                    <div>
-                        <h3>Statistics</h3>
-                        <p>4 new questions</p>
+                    <div class="alert-item">
+                        <img src="images/alert2.png" alt="Alert Image">
+                        <div>
+                            <h3>Probability Question</h3>
+                            <p>8 hours ago</p>
+                        </div>
+                    </div>
+                    <div class="alert-item">
+                        <img src="images/alert3.png" alt="Alert Image">
+                        <div>
+                            <h3>Statistics Question</h3>
+                            <p>12 hours ago</p>
+                        </div>
                     </div>
                 </div>
             </div>
