@@ -4,192 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UniHelp Forum</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #222;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        }
-        .sidebar {
-            width: 250px;
-            background-color: #333;
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
-        .sidebar .logo {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .sidebar .menu {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .sidebar .menu li {
-            padding: 15px;
-            text-align: center;
-            border-bottom: 1px solid #444;
-        }
-        .sidebar .menu li a {
-            color: #fff;
-            text-decoration: none;
-            display: block;
-        }
-        .content {
-            margin-left: 250px;
-            padding: 20px;
-        }
-        .forum-card {
-            background-color: #444;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .forum-card img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            margin-right: 20px;
-        }
-        .forum-card .forum-info {
-            flex-grow: 1;
-        }
-        .forum-card .forum-info h2 {
-            margin: 0;
-            font-size: 24px;
-        }
-        .forum-card .forum-info p {
-            margin: 5px 0 0;
-            font-size: 14px;
-            color: #bbb;
-        }
-        .forum-card .enter-btn {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .profile {
-            background-color: #333;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-        .profile img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: block;
-            margin: 0 auto;
-        }
-        .profile h3 {
-            text-align: center;
-            margin: 10px 0 0;
-        }
-        .profile .stats {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 10px;
-        }
-        .profile .stats div {
-            text-align: center;
-        }
-        .alerts {
-            background-color: #333;
-            padding: 20px;
-            border-radius: 10px;
-        }
-        .alerts h4 {
-            margin: 0 0 10px;
-        }
-        .alerts .alert-item {
-            display: flex;
-            align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid #444;
-        }
-        .alerts .alert-item img {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            margin-right: 10px;
-        }
-        .alerts .alert-item:last-child {
-            border-bottom: none;
-        }
-    </style>
+    <link rel="stylesheet" href="main_page.css">
 </head>
 <body>
-    <div class="sidebar">
-        <div class="logo">
-            <h2>UniHelp</h2>
+    <div class="container">
+        <div class="sidebar">
+            <div>
+                <div class="logo">UniHelp</div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">My Courses</a></li>
+                        <li><a href="#">Forums</a></li>
+                        <li><a href="#">Chat</a></li>
+                        <li><a href="#">My Profile</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="premium">
+                <button>Go Premium</button>
+            </div>
         </div>
-        <ul class="menu">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">My Courses</a></li>
-            <li><a href="#">Forums</a></li>
-            <li><a href="#">Chat</a></li>
-            <li><a href="#">My Profile</a></li>
-        </ul>
-        <div class="profile">
-            <img src="profile.png" alt="Profile Picture">
-            <h3>Manuel Lopez</h3>
-            <p>Student</p>
-            <div class="stats">
-                <div>
-                    <h4>12</h4>
-                    <p>My doubts</p>
+        <div class="main-content">
+            <header>
+                <input type="text" placeholder="Search...">
+                <div class="user-info">
+                    <span>Manuel Lopez</span>
+                    <button class="logout">Logout</button>
                 </div>
-                <div>
-                    <h4>6</h4>
-                    <p>My forums</p>
+            </header>
+            <div class="dashboard">
+                <div class="forum-card">
+                    <div class="forum-info">
+                        <h2>Calculus</h2>
+                        <p>This forum is dedicated to the study of calculus, providing a space to discuss problems, concepts and questions related to differential and integral calculus. If you have questions or need help with any calculation topic, use this forum!</p>
+                    </div>
+                    <button class="enter-btn">Enter</button>
+                </div>
+                <div class="forum-card">
+                    <div class="forum-info">
+                        <h2>Algorithm Design</h2>
+                        <p>This forum focuses on algorithm design, offering a space to discuss strategies, solve problems, and share knowledge about efficient algorithms. If you have questions or need help with an algorithm, use this forum!</p>
+                    </div>
+                    <button class="enter-btn">Enter</button>
+                </div>
+                <div class="forum-card">
+                    <div class="forum-info">
+                        <h2>Probability and Statistics</h2>
+                        <p>This forum is dedicated to probability and statistics, providing a space to discuss theories, solve problems and share knowledge in these fields. If you have questions or need help with any probability and statistics topic, use this forum!</p>
+                    </div>
+                    <button class="enter-btn">Enter</button>
+                </div>
+                <div class="forum-card">
+                    <div class="forum-info">
+                        <h2>Introduction to Parallel Programming</h2>
+                        <p>This forum is dedicated to students interested in the field of parallel programming. Parallel programming involves dividing tasks into smaller sub-tasks that can be processed simultaneously, enhancing computational efficiency. This space allows you to discuss study strategies, resolve doubts, and share resources related to parallel programming. If you have questions or need help, use this forum!</p>
+                    </div>
+                    <button class="enter-btn">Enter</button>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="content">
-        <div class="forum-card">
-            <div class="forum-info">
-                <h2>Calculus</h2>
-                <p>This forum is dedicated to the study of calculus, providing a space to discuss problems, concepts and questions related to differential and integral calculus. If you have questions or need help with any calculation topic, use this forum!</p>
-            </div>
-            <button class="enter-btn">Enter</button>
-        </div>
-        <div class="forum-card">
-            <div class="forum-info">
-                <h2>Algorithm Design</h2>
-                <p>This forum focuses on algorithm design, offering a space to discuss strategies, solve problems, and share knowledge about efficient algorithms. If you have questions or need help with an algorithm, use this forum!</p>
-            </div>
-            <button class="enter-btn">Enter</button>
-        </div>
-        <div class="forum-card">
-            <div class="forum-info">
-                <h2>Probability and Statistics</h2>
-                <p>This forum is dedicated to probability and statistics, providing a space to discuss theories, solve problems and share knowledge in these fields. If you have questions or need help with any probability and statistics topic, use this forum!</p>
-            </div>
-            <button class="enter-btn">Enter</button>
-        </div>
-        <div class="forum-card">
-            <div class="forum-info">
-                <h2>Introduction to Parallel Programming</h2>
-                <p>This forum is dedicated to students interested in the field of parallel programming. Parallel programming involves dividing tasks into smaller sub-tasks that can be processed simultaneously, enhancing computational efficiency. This space allows you to discuss study strategies, resolve doubts, and share resources related to parallel programming. If you have questions or need help, use this forum!</p>
-            </div>
-            <button class="enter-btn">Enter</button>
         </div>
         <div class="alerts">
             <h4>Latest Alerts</h4>
