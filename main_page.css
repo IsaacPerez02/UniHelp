@@ -70,20 +70,17 @@ body {
     right: 0;
 }
 
-.main-content {
-    flex: 1;
-    margin-left: 200px;
-    margin-right: 200px;
-    padding: 20px;
-    overflow-y: auto; /* Default scrollbar for all devices */
-}
-      
-@media (min-width: 768px) { /* Hide scrollbar on screens wider than 768px (desktops) */
-    .main-content {
-      overflow-y: hidden; /* Hide scrollbar */
-    }
-}      
-      
+.main-content::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+    height: auto; /* Height of the scrollbar */
+    background: #f3f3f3; /* Background color of the scrollbar track */
+  }
+  
+  .main-content::-webkit-scrollbar-thumb {
+    background: #2c2c2c; /* Background color of the scrollbar thumb */
+    border-radius: 5px; /* Rounded corners for the thumb */
+  }
+     
   
 
 header {
