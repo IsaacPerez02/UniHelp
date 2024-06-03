@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <style>
+        body {
+            background-color: black;
+            color: green;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: green;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: darkgreen;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input[type="text"], input[type="password"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 200px;
+        }
+        input[type="submit"] {
+            background-color: green;
+            color: black;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: darkgreen;
+        }
+        .error-message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <a href="bienvenida.html" class="back-button">Back</a>
+    <h1>Log in</h1>
+    <p id="errorMessage" class="error-message" style="display: none;"></p>
+    <form id="loginForm">
+        <input type="text" name="username" placeholder="User name" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="submit" value="Log in">
+    </form>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            var username = document.getElementsByName("username")[0].value;
+            var password = document.getElementsByName("password")[0].value;
+
+            fetch('usuarios.txt')
+                .then(response => response.text())
+                .then(text => {
+                    var users = text.split('\n');
+                    var validUser = users.some(user => {
+                        var [storedUsername, storedPassword] = user.split(':');
+                        return username === storedUsername && password === storedPassword;
+                    });
+
+                    if (validUser) {
+                        localStorage.setItem('username', username);
+                        window.location.href = "main_page.html";
+                    } else {
+                        document.getElementById("errorMessage").style.display = "block";
+                        document.getElementById("errorMessage").innerText = "Username or password incorrect.";
+                    }
+                })
+                .catch(error => console.error('Error', error));
+        });
+    </script>
+</body>
+</html>

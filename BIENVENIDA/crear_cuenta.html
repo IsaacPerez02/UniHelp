@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create account</title>
+    <style>
+        body {
+            background-color: black;
+            color: green;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input[type="text"], input[type="password"], input[type="email"], select {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%; 
+        }
+        input[type="submit"] {
+            background-color: green;
+            color: black;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: darkgreen;
+        }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: green;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm_password").value;
+            if (password !== confirmPassword) {
+                alert("Passwords are not the same. Try again!");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <a href="bienvenida.html" class="back-button">Back</a>
+    <h1>Create account</h1>
+    <form onsubmit="return validateForm()" action="procesar_creacion.php" method="post">
+        <input type="text" name="username" placeholder="User name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <input type="password" id="confirm_password" placeholder="Confirm password" required>
+        <select name="role" required>
+            <option value="" disabled selected>Select your role</option>
+            <option value="Estudiante">Student</option>
+            <option value="Profesor">Teacher</option>
+        </select>
+        <input type="submit" value="Create account">
+    </form>
+</body>
+</html>
