@@ -1,26 +1,150 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
-    <link href="main_page.css" rel="stylesheet" />
-    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniHelp Dashboard</title>
+    <link rel="stylesheet" href="main_page.css">
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js'></script>
+    <script defer src="main_page.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        #calendar {
+            max-width: 500px; /* Ajusta el tamaño máximo del calendario */
+            margin: 0 auto; /* Centra el calendario horizontalmente */
+        }
+    </style>
 </head>
 <body>
-    <div class="v0_15">
-        <div class="v0_16">
-            <span class="v0_17">UniHelp</span>
-            <div class="v0_18"></div>
-        </div>
-        <div class="v0_19">
-            <div class="v0_20"></div>
-            <div class="v0_21">
-                <div class="v0_22"></div>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="images/logo.png" alt="UniHelp Logo" class="logo-image">
+                <span>UniHelp</span>
             </div>
-            <span class="v0_23">LOG IN / sign in</span>
-        </div>
-        <div class="v0_24">
-            <div class="v0_25"></div>
-            <span class="v0_26">About us: Nosaltres unihelp som una petit projecte universitari amb l’intenció de millorar la comunicació professor-alumne. Aquesta web et dotarà de einees per millorar la teva organització, i fer mes acessible l’atenció dels profesors.</span>
+            <nav>
+                <ul>
+                    <li><a href="main_page.html"><i class="fas fa-tachometer-alt"></i></a></li>
+                    <li><a href="mycourses.html"><i class="fas fa-book"></i></a></li>
+                    <li><a href="foro.html"><i class="fas fa-comments"></i></a></li>
+                    <li><a href="chat.html" class="nav-link"><i class="fas fa-comment-alt"></i></a></li>
+                    <li><a href="myprofile.html"><i class="fas fa-user"></i></a></li>
+                </ul>
+            </nav>
+            <div class="premium">
+                <button>Activate Premium</button>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header>
+                <input type="text" placeholder="Search">
+                <button class="new-entry">New Entry</button>
+                <div class="user-info">
+                    <span class="username">Julia Grey</span>
+                    <button class="profile-summary-toggle">Profile</button>
+                    <button class="logout">Logout</button>
+                </div>
+            </header>
+            <section class="dashboard">
+                <div class="calendar">
+                    <h2>My Calendar</h2>
+                    <div id='calendar'></div>
+                </div>
+                <div class="notes">
+                    <h2>My Notes</h2>
+                    <button class="add-note-button">Add Directory/File <span class="calendar-icon">&#x1F4C5;</span></button>
+                    <div class="note-item">
+                        <h3>Calculus Notes</h3>
+                        <p>These notes cover the fundamentals of differential and integral calculus, including limits, derivatives, and integrals.</p>
+                    </div>
+                    <div class="note-item">
+                        <h3>Algorithm Design Notes</h3>
+                        <p>Notes on designing efficient algorithms, covering topics such as dynamic programming, greedy algorithms, and divide and conquer strategies.</p>
+                    </div>
+                    <div class="note-item">
+                        <h3>Statistics Notes</h3>
+                        <p>Comprehensive notes on probability and statistics, including probability distributions, hypothesis testing, and regression analysis.</p>
+                    </div>
+                </div>
+                <div class="subjects">
+                    <h2>My Subjects</h2>
+                    <div class="subject-item">
+                        <h3>Calculus</h3>
+                        <p>Learn about limits, derivatives, integrals, and their applications in this fundamental mathematics course.</p>
+                    </div>
+                    <div class="subject-item">
+                        <h3>Algorithm Design</h3>
+                        <p>Explore the principles of designing efficient algorithms and solving complex computational problems.</p>
+                    </div>
+                    <div class="subject-item">
+                        <h3>Probability and Statistics</h3>
+                        <p>Understand the principles of probability, statistical methods, and their applications in various fields.</p>
+                    </div>
+                    <div class="subject-item">
+                        <h3>Physics</h3>
+                        <p>Study the fundamental concepts of physics, including mechanics, electromagnetism, and thermodynamics.</p>
+                    </div>
+                </div>
+                <div class="alerts">
+                    <h2>Latest Alerts</h2>
+                    <div class="alert-item">
+                        <h3>Exam Schedule</h3>
+                        <p>The final exam schedule has been released. Check the exams section for details.</p>
+                    </div>
+                    <div class="alert-item">
+                        <h3>Maintenance Downtime</h3>
+                        <p>There will be a scheduled maintenance downtime on June 10th from 2 AM to 4 AM.</p>
+                    </div>
+                    <div class="alert-item">
+                        <h3>New Course Materials</h3>
+                        <p>New course materials for Algorithm Design have been uploaded to the course page.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="profile-summary">
+            <button class="close-profile-summary">&times;</button>
+            <div class="profile-header">
+                <img src="images/profile-picture.jpg" alt="Profile Picture" class="profile-picture">
+                <h2>Julia Grey</h2>
+                <p>Chief Editor</p>
+            </div>
+            <div class="profile-stats">
+                <div class="stat">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Articles</span>
+                    <span>126</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-star"></i>
+                    <span>Reviews</span>
+                    <span>1.37K</span>
+                </div>
+            </div>
+            <div class="latest-alerts">
+                <h2>Latest Alerts</h2>
+                <div class="alert-item">
+                    <img src="images/calculus.png" alt="Calculus">
+                    <span>Calculo</span>
+                    <span>3 hours ago</span>
+                </div>
+                <div class="alert-item">
+                    <img src="images/probability.png" alt="Probability">
+                    <span>Duda sobre Probabilidad</span>
+                    <span>5 hours ago</span>
+                </div>
+                <div class="alert-item">
+                    <img src="images/calculus.png" alt="Calculus">
+                    <span>Duda sobre Calculo</span>
+                    <span>7 hours ago</span>
+                </div>
+                <div class="alert-item">
+                    <img src="images/statistics.png" alt="Statistics">
+                    <span>Duda sobre Estadistica</span>
+                    <span>1 day ago</span>
+                </div>
+            </div>
         </div>
     </div>
 </body>
