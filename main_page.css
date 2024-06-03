@@ -102,15 +102,17 @@ header button {
     cursor: pointer;
 }
 
-.logout-button {
+
+header .user-info button.logout {
     background-color: red; /* Set background color to red */
     color: white; /* Set text color to white for contrast */
-    padding: 10px 20px; /* Adjust padding as needed */
+    padding: 5px 10px; /* Adjust padding if needed */
     border: none; /* Remove default border */
     border-radius: 5px; /* Add rounded corners */
     cursor: pointer; /* Indicate clickable area */
   }
   
+
 header .user-info {
     display: flex;
     align-items: center;
