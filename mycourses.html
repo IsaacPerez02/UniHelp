@@ -4,8 +4,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UniHelp My Courses</title>
-    <link rel="stylesheet" href="main_page.css">
-    <script defer src="main_page.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1d1d1d;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #2c2c2c;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 20px 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .premium {
+            text-align: center;
+        }
+
+        .premium button {
+            background-color: #00c853;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        header input {
+            padding: 10px;
+            width: 40%;
+            border-radius: 5px;
+            border: none;
+        }
+
+        header .logout {
+            background-color: #ff1744;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        header .user-info {
+            display: flex;
+            align-items: center;
+        }
+
+        header .user-info span {
+            margin-right: 20px;
+        }
+
+        .courses {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .course-section {
+            background-color: #2c2c2c;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .course-info h2 {
+            margin-top: 0;
+            color: #ffffff; /* Change title color to dark gray */
+        }
+
+        .course-info p {
+            margin: 5px 0 0;
+            font-size: 14px;
+            color: #ccc; /* Change description color to light gray */
+        }
+
+        .enter-btn {
+            background-color: #00c853; /* Change button background color to dark gray */
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 10px; /* Add margin top to separate from course description */
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -27,14 +161,29 @@
         <main class="main-content">
             <header>
                 <h1>My Courses</h1>
+                <div class="user-info">
+                    <span>Manuel Lopez</span>
+                    <button class="logout">Logout</button>
+                </div>
             </header>
-            <!-- My Courses content goes here -->
+            <div class="courses">
+                <section class="course-section">
+                    <div class="course-info">
+                        <h2>Introduction to Programming</h2>
+                        <p>This course covers the fundamentals of programming, including basic syntax, data types, and control structures. By the end of the course, you will be able to write simple programs in Python.</p>
+                    </div>
+                    <a href="#" class="enter-btn">Enter Course</a>
+                </section>
+                <section class="course-section">
+                    <div class="course-info">
+                        <h2>Web Development</h2>
+                        <p>In this course, you will learn about web development technologies such as HTML, CSS, and JavaScript. You will also build a basic website as a final project.</p>
+                    </div>
+                    <a href="#" class="enter-btn">Enter Course</a>
+                </section>
+                <!-- Add more course sections here -->
+            </div>
         </main>
     </div>
 </body>
 </html>
-
-
-
-
-
