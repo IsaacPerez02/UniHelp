@@ -41,7 +41,8 @@
                 <input type="text" placeholder="Search">
                 <button class="new-entry">New Entry</button>
                 <div class="user-info">
-                    <span class="username"></span>
+                    <span class="username">Julie Grey</span>
+                    <button class="profile-summary-toggle">Profile</button>
                     <button class="logout">Logout</button>
                 </div>
             </header>
@@ -102,6 +103,48 @@
                 </div>
             </section>
         </main>
+        <aside class="profile-summary">
+            <button class="close-profile-summary">&times;</button>
+            <div class="profile-header">
+                <img src="images/profile-picture.png" alt="Profile Picture" class="profile-picture">
+                <h2>Julie Grey</h2>
+                <p>Chief Editor</p>
+            </div>
+            <div class="profile-stats">
+                <div class="stat">
+                    <i class="fas fa-file-alt"></i>
+                    <span>126 Articles</span>
+                </div>
+                <div class="stat">
+                    <i class="fas fa-star"></i>
+                    <span>1.37K Reviews</span>
+                </div>
+            </div>
+            <div class="latest-alerts">
+                <h2>Latest Alerts</h2>
+                <div class="alert-item">
+                    <img src="images/alert1.png" alt="Alert">
+                    <div>
+                        <h3>Calculus</h3>
+                        <p>5 new questions</p>
+                    </div>
+                </div>
+                <div class="alert-item">
+                    <img src="images/alert2.png" alt="Alert">
+                    <div>
+                        <h3>Probability</h3>
+                        <p>3 new questions</p>
+                    </div>
+                </div>
+                <div class="alert-item">
+                    <img src="images/alert3.png" alt="Alert">
+                    <div>
+                        <h3>Statistics</h3>
+                        <p>4 new questions</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -110,6 +153,19 @@
                 initialView: 'dayGridMonth'
             });
             calendar.render();
+
+            // Handle profile summary toggle
+            const profileSummaryToggle = document.querySelector('.profile-summary-toggle');
+            const profileSummary = document.querySelector('.profile-summary');
+            const closeProfileSummary = document.querySelector('.close-profile-summary');
+
+            profileSummaryToggle.addEventListener('click', () => {
+                profileSummary.classList.toggle('open');
+            });
+
+            closeProfileSummary.addEventListener('click', () => {
+                profileSummary.classList.remove('open');
+            });
         });
     </script>
 </body>
