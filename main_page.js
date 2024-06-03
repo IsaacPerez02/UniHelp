@@ -60,4 +60,17 @@ document.addEventListener('DOMContentLoaded', () => {
         // Implement logout functionality
         alert('Logout button clicked');
     });
+
+    // Toggle profile summary panel
+    const profileSummaryToggle = document.querySelector('.profile-summary-toggle');
+    const profileSummary = document.querySelector('.profile-summary');
+    const closeProfileSummary = document.querySelector('.close-profile-summary');
+
+    profileSummaryToggle.addEventListener('click', () => {
+        profileSummary.classList.toggle('open');
+    });
+
+    closeProfileSummary.addEventListener('click', () => {
+        profileSummary.classList.remove('open');
+    });
 });
