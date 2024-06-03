@@ -5,7 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UniHelp Chat</title>
     <link rel="stylesheet" href="main_page.css">
-    <script defer src="main_page.js"></script>
+    <style>
+        /* Estilos adicionales para el chat */
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: black;
+            padding: 20px;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Alinea los mensajes a la derecha */
+        }
+        .message {
+            background-color: white; /* Cambiado a blanco */
+            color: black; /* Cambiado a negro */
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            max-width: 70%;
+        }
+        .user-message {
+            background-color: #4CAF50;
+            color: white;
+            position: relative;
+            padding-left: 60px; /* Espacio para la foto de perfil */
+        }
+        .message-sender {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            font-size: 14px;
+        }
+        .message-sender span {
+            font-weight: bold;
+            color: #333;
+        }
+        .message-sender img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%; /* Para hacerla redonda */
+            margin-right: 10px;
+        }
+        .input-container {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .message-input {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .send-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -28,11 +98,48 @@
             <header>
                 <h1>Chat</h1>
             </header>
-            <!-- Chat content goes here -->
+            <div class="chat-container">
+                <div class="message user-message">
+                    <div class="message-sender"><span>Juan</span></div>
+                    ¿Alguien puede ayudarme con una pregunta de Cálculo I?
+                </div>
+            </div>
+            <div class="input-container">
+                <input type="text" class="message-input" placeholder="Escribe tu mensaje...">
+                <button class="send-button">Enviar</button>
+            </div>
         </main>
     </div>
+
+    <script>
+        // Capturamos el input del mensaje y el botón de enviar
+        const messageInput = document.querySelector('.message-input');
+        const sendButton = document.querySelector('.send-button');
+
+        // Función para enviar un mensaje
+        function sendMessage() {
+            const messageText = messageInput.value.trim();
+            if (messageText !== '') {
+                const messageContainer = document.querySelector('.chat-container');
+                const newMessage = document.createElement('div');
+                newMessage.classList.add('message');
+                newMessage.textContent = messageText; // Añadido el texto del mensaje directamente
+                messageContainer.appendChild(newMessage);
+                messageInput.value = '';
+                // Auto-scroll para mantener el mensaje más reciente visible
+                messageContainer.scrollTop = messageContainer.scrollHeight;
+            }
+        }
+
+        // Event listener para enviar mensaje cuando se hace clic en el botón
+        sendButton.addEventListener('click', sendMessage);
+
+        // Event listener para enviar mensaje cuando se presiona Enter en el teclado
+        messageInput.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
 </body>
 </html>
-
-
-
