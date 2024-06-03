@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nueva Pregunta</title>
+    <link rel="stylesheet" href="main_page.css">
+    <style>
+        /* Estilos adicionales para la página de Nueva Pregunta */
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #2c2c2c;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 20px 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .premium {
+            text-align: center;
+        }
+
+        .premium button {
+            background-color: #00c853;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .alerts {
+            width: 300px;
+            background-color: #2c2c2c;
+            padding: 20px;
+            border-radius: 10px;
+            overflow: auto;
+            margin-left: auto;
+            margin-right: 20px;
+        }
+
+        .alerts h4 {
+            margin-top: 0;
+            color: #fff;
+        }
+
+        .alert-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #444;
+        }
+
+        .alert-item img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .alert-item p {
+            margin: 0;
+            color: #bbb;
+        }
+
+        .alert-item:last-child {
+            border-bottom: none;
+        }
+
+        .form-container {
+            width: 50%;
+            padding: 20px;
+            background-color: #2c2c2c;
+            border-radius: 10px;
+        }
+
+        .form-container h2 {
+            margin-top: 0;
+            color: #fff;
+        }
+
+        .form-container input[type="text"],
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .form-container textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .form-container button {
+            background-color: #00c853;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <div>
+            <div class="logo">UniHelp</div>
+            <nav>
+                <ul>
+                    <li><a href="main_page.html">Dashboard</a></li>
+                    <li><a href="mycourses.html">My Courses</a></li>
+                    <li><a href="foro.html">Forums</a></li>
+                    <li><a href="chat.html">Chat</a></li>
+                    <li><a href="myprofile.html">My Profile</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="premium">
+            <button>Go Premium</button>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="form-container">
+            <h2>Nueva Pregunta</h2>
+            <form action="#">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" name="titulo" placeholder="Ingrese el título de la pregunta..." required>
+
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" name="descripcion" placeholder="Ingrese la descripción de la pregunta..." required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <div class="alerts">
+        <h4>Latest Alerts</h4>
+        <div class="alert-item">
+            <img src="calculus.png" alt="Calculus">
+            <div>
+                <p>Calculo</p>
+                <p>3 October, 2023 - 9:22 AM</p>
+            </div>
+        </div>
+        <div class="alert-item">
+            <img src="probability.png" alt="Probability">
+            <div>
+                <p>Duda sobre Probabilidad</p>
+                <p>3 October, 2023 - 5:17 AM</p>
+            </div>
+        </div>
+        <div class="alert-item">
+            <img src="calculus.png" alt="Calculus">
+            <div>
+                <p>Duda sobre Calculo</p>
+                <p>2 October, 2023 - 7:16 PM</p>
+            </div>
+        </div>
+        <div class="alert-item">
+            <img src="statistics.png" alt="Statistics">
+            <div>
+                <p>Duda sobre Estadistica</p>
+                <p>2 October, 2023 - 6:04 PM</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
