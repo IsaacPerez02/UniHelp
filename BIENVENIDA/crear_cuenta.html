@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create account</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Poppins:wght@700&display=swap">
     <style>
         body {
             background-color: black;
@@ -16,16 +17,42 @@
             height: 100vh;
             margin: 0;
         }
+        header {
+            position: absolute;
+            top: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo img {
+            height: 50px;
+        }
+        .logo span {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700; /* Bold */
+            font-size: 24px;
+            color: green; /* Match the text color */
+        }
         form {
             display: flex;
             flex-direction: column;
             gap: 10px;
+            width: 300px;
         }
         input[type="text"], input[type="password"], input[type="email"], select {
             padding: 10px;
             border: none;
             border-radius: 5px;
-            width: 100%; 
+            width: 100%;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500; /* Medium */
         }
         input[type="submit"] {
             background-color: green;
@@ -54,20 +81,46 @@
         .back-button:hover {
             background-color: darkgreen;
         }
+        .google-signin-button {
+            margin-top: 20px;
+        }
+        .terms {
+            margin-top: 20px;
+            font-size: 12px;
+            text-align: center;
+        }
+        .terms a {
+            color: green;
+            text-decoration: none;
+        }
+        .terms a:hover {
+            text-decoration: underline;
+        }
     </style>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script>
-        function validateForm() {
-            var password = document.getElementById("password").value;
-            var confirmPassword = document.getElementById("confirm_password").value;
-            if (password !== confirmPassword) {
-                alert("Passwords are not the same. Try again!");
-                return false;
-            }
-            return true;
+        function handleCredentialResponse(response) {
+            console.log("Encoded JWT ID token: " + response.credential);
+            // Aquí puedes enviar el token al servidor para su validación
+            // fetch('YOUR_SERVER_ENDPOINT', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify({ token: response.credential })
+            // }).then(response => {
+            //     return response.json();
+            // }).then(data => {
+            //     console.log(data);
+            // });
         }
     </script>
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo de UNIHELP">
+            <span>UniHelp</span>
+        </div>
+    </header>
     <a href="bienvenida.html" class="back-button">Back</a>
     <h1>Create account</h1>
     <form onsubmit="return validateForm()" action="procesar_creacion.php" method="post">
@@ -82,5 +135,20 @@
         </select>
         <input type="submit" value="Create account">
     </form>
+    <p>or continue with:</p>
+    <div id="g_id_onload"
+        data-client_id="YOUR_GOOGLE_CLIENT_ID"
+        data-callback="handleCredentialResponse"
+        data-auto_prompt="false">
+    </div>
+    <div class="g_id_signin google-signin-button"
+        data-type="standard"
+        data-shape="rectangular"
+        data-theme="outline"
+        data-text="continue_with"
+        data-size="large"
+        data-locale="en">
+    </div>
+    <p class="terms">By clicking continue, you agree to our <a href="terms_of_service.html">Terms of Service</a> and <a href="privacy_policy.html">Privacy Policy</a>.</p>
 </body>
 </html>
