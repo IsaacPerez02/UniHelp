@@ -1,6 +1,40 @@
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1d1d1d;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    position: relative;
+}
+
+.sidebar {
+    width: 180px; /* Reduced width for the sidebar */
+    background-color: #2c2c2c;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+  }
+  
+  nav ul li {
+    list-style: none;
+    margin-bottom: 10px;
+    display: flex; /* Make navigation items inline */
+    align-items: center; /* Align icons and titles vertically */
+  }
+  
+  nav ul li a {
+    color: #body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
     background-color: #1d1d1d;
     color: #fff;
 }
@@ -33,7 +67,7 @@ body {
   nav ul li a {
     color: #aaa; /* Lighter text color */
     text-decoration: none; /* Remove underline */
-    padding-left: 10px; /* Add space between icon and title */
+    padding-left: 30px; /* Add space between icon and title */
   }
   
   nav ul li span {
@@ -191,3 +225,216 @@ header .user-info .username {
     border-radius: 5px;
     cursor: pointer;
 }
+
+nav ul li {
+    list-style: none;
+    margin-bottom: 20px;
+    display: flex; /* Make navigation items inline */
+    align-items: center; /* Align icons and titles vertically */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition effect */
+}
+
+nav ul li a {
+    color: #aaa; /* Lighter text color */
+    text-decoration: none; /* Remove underline */
+    padding-left: 0px; /* Add space between icon and title */
+    transition: color 0.3s ease; /* Add transition effect */
+}
+
+nav ul li:hover {
+    background-color: #3f3f; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+nav ul li:hover a {
+    color: #fff; /* Change link color on hover */
+}
+
+aaa; /* Lighter text color */
+    text-decoration: none; /* Remove underline */
+    padding-left: 30px; /* Add space between icon and title */
+  }
+  
+  nav ul li span {
+    color: #aaa; /* Same color as text */
+  }
+  
+  nav ul li.active a, /* Apply styling to active item */
+  nav ul li:hover a { /* Hover effect */
+    color: #fff;
+  }
+  
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo img {
+    width: 60px; /* Ajusta el tamaño del logo */
+    height: 60px;
+}
+
+.logo span {
+    display: block;
+    font-size: 18px;
+    margin-top: 5px;
+    color: #fff;
+}
+
+.left-sidebar {
+    left: 0;
+}
+
+.right-sidebar {
+    right: 0;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 200px;
+    margin-right: 200px;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    margin-right: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+header button {
+    background-color: #00c853;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+header .user-info button.logout {
+    background-color: red; /* Set background color to red */
+    color: white; /* Set text color to white for contrast */
+    padding: 5px 10px; /* Adjust padding if needed */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Indicate clickable area */
+  }
+  
+
+header .user-info {
+    display: flex;
+    align-items: center;
+}
+
+header .user-info .username {
+    margin-right: 10px;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.calendar, .notes, .subjects, .alerts {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.profile-summary {
+    background-color: #2c2c2c;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-header .profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.latest-alerts .alert-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.latest-alerts .alert-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.premium {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.premium button {
+    background-color: #d32f2f;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav ul li {
+    list-style: none;
+    margin-bottom: 20px;
+    display: flex; /* Make navigation items inline */
+    align-items: center; /* Align icons and titles vertically */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Add transition effect */
+}
+
+nav ul li a {
+    color: #aaa; /* Lighter text color */
+    text-decoration: none; /* Remove underline */
+    padding-left: 0px; /* Add space between icon and title */
+    transition: color 0.3s ease; /* Add transition effect */
+}
+nav ul li a i {
+    margin-right: 10px; /* Ajusta este valor según tus necesidades */
+}
+
+nav ul li:hover {
+    background-color: rgb(168, 168, 168); /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+nav ul li:hover a {
+    color: #fff; /* Change link color on hover */
+}
+
