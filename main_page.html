@@ -14,41 +14,35 @@
     <div class="container">
         <aside class="sidebar left-sidebar">
             <div class="logo">
+<<<<<<< HEAD
+                <img src="images/logo.png" alt="UniHelp Logo" class="logo-image">
+                <span>UniHelp</span>
+=======
               <img src="images/logo.png" alt="UniHelp Logo" class="logo-image">
               <span><strong>UniHelp</strong></span>
 
+>>>>>>> a98e88e8b8907b5f547e15fcef61f81dc5aac263
             </div>
             <nav>
-              <ul>
-                <li>
-                  <a href="main_page.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
-                </li>
-                <li>
-                  <a href="mycourses.html"><i class="fas fa-book"></i><span>My Courses</span></a>
-                </li>
-                <li>
-                  <a href="foro.html"><i class="fas fa-comments"></i><span>Forum</span></a>
-                </li>
-                <li>
-                  <a href="chat.html" class="nav-link"><i class="fas fa-comment-alt"></i><span>Chat</span></a>
-                </li>
-                <li>
-                  <a href="myprofile.html"><i class="fas fa-user"></i><span>My Profile</span></a>
-                </li>
-              </ul>
+                <ul>
+                    <li><a href="main_page.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                    <li><a href="mycourses.html"><i class="fas fa-book"></i><span>My Courses</span></a></li>
+                    <li><a href="foro.html"><i class="fas fa-comments"></i><span>Forum</span></a></li>
+                    <li><a href="chat.html" class="nav-link"><i class="fas fa-comment-alt"></i><span>Chat</span></a></li>
+                    <li><a href="myprofile.html"><i class="fas fa-user"></i><span>My Profile</span></a></li>
+                </ul>
             </nav>
             <div class="premium">
-              <button>Activate Premium</button>
+                <button>Activate Premium</button>
             </div>
-          </aside>
-          
+        </aside>
 
         <main class="main-content">
             <header>
                 <input type="text" placeholder="Search">
                 <button class="new-entry">New Entry</button>
                 <div class="user-info">
-                    <span class="username"></span>
+                    <span class="username">John Doe</span>
                     <button class="logout">Logout</button>
                 </div>
             </header>
@@ -59,52 +53,60 @@
                 </div>
                 <div class="notes">
                     <h2>My Notes</h2>
-                    <button class="add-note-button">Add Directory/File <span class="calendar-icon">&#x1F4C5;</span></button>
+                    <button class="add-note-button">Add Note <span class="calendar-icon">&#x1F4C5;</span></button>
                     <div class="note-item">
-                        <h3>Calculus Notes</h3>
-                        <p>These notes cover the fundamentals of differential and integral calculus, including limits, derivatives, and integrals.</p>
+                        <h3 contenteditable="true">Calculus Notes</h3>
+                        <p contenteditable="true">These notes cover the fundamentals of differential and integral calculus, including limits, derivatives, and integrals.</p>
+                        <button class="save-note-button">Save</button>
+                        <button class="delete-note-button">Delete</button>
                     </div>
                     <div class="note-item">
-                        <h3>Algorithm Design Notes</h3>
-                        <p>Notes on designing efficient algorithms, covering topics such as dynamic programming, greedy algorithms, and divide and conquer strategies.</p>
+                        <h3 contenteditable="true">Algorithm Design Notes</h3>
+                        <p contenteditable="true">Notes on designing efficient algorithms, covering topics such as dynamic programming, greedy algorithms, and divide and conquer strategies.</p>
+                        <button class="save-note-button">Save</button>
+                        <button class="delete-note-button">Delete</button>
                     </div>
                     <div class="note-item">
-                        <h3>Statistics Notes</h3>
-                        <p>Comprehensive notes on probability and statistics, including probability distributions, hypothesis testing, and regression analysis.</p>
+                        <h3 contenteditable="true">Statistics Notes</h3>
+                        <p contenteditable="true">Comprehensive notes on probability and statistics, including probability distributions, hypothesis testing, and regression analysis.</p>
+                        <button class="save-note-button">Save</button>
+                        <button class="delete-note-button">Delete</button>
                     </div>
                 </div>
                 <div class="subjects">
                     <h2>My Subjects</h2>
                     <div class="subject-item">
-                        <h3>Calculus</h3>
-                        <p>Learn about limits, derivatives, integrals, and their applications in this fundamental mathematics course.</p>
+                        <h3>Mathematics</h3>
+                        <p>Algebra, Calculus, Geometry</p>
                     </div>
                     <div class="subject-item">
-                        <h3>Algorithm Design</h3>
-                        <p>Explore the principles of designing efficient algorithms and solving complex computational problems.</p>
+                        <h3>Computer Science</h3>
+                        <p>Algorithms, Data Structures, Operating Systems</p>
                     </div>
                     <div class="subject-item">
-                        <h3>Probability and Statistics</h3>
-                        <p>Understand the principles of probability, statistical methods, and their applications in various fields.</p>
-                    </div>
-                    <div class="subject-item">
-                        <h3>Physics</h3>
-                        <p>Study the fundamental concepts of physics, including mechanics, electromagnetism, and thermodynamics.</p>
+                        <h3>Statistics</h3>
+                        <p>Probability, Regression, Hypothesis Testing</p>
                     </div>
                 </div>
                 <div class="alerts">
                     <h2>Latest Alerts</h2>
                     <div class="alert-item">
-                        <h3>Exam Schedule</h3>
-                        <p>The final exam schedule has been released. Check the exams section for details.</p>
+                        <h3>Exam Coming Up</h3>
+                        <p>4 hours ago</p>
+                        <button class="edit-alert-button">Edit</button>
+                        <button class="delete-alert-button">Delete</button>
                     </div>
                     <div class="alert-item">
-                        <h3>Maintenance Downtime</h3>
-                        <p>There will be a scheduled maintenance downtime on June 10th from 2 AM to 4 AM.</p>
+                        <h3>Probability Question</h3>
+                        <p>8 hours ago</p>
+                        <button class="edit-alert-button">Edit</button>
+                        <button class="delete-alert-button">Delete</button>
                     </div>
                     <div class="alert-item">
-                        <h3>New Course Materials</h3>
-                        <p>New course materials for Algorithm Design have been uploaded to the course page.</p>
+                        <h3>Statistics Question</h3>
+                        <p>12 hours ago</p>
+                        <button class="edit-alert-button">Edit</button>
+                        <button class="delete-alert-button">Delete</button>
                     </div>
                 </div>
             </section>
@@ -113,20 +115,27 @@
         <aside class="sidebar right-sidebar">
             <div class="profile-summary">
                 <div class="profile-header">
+<<<<<<< HEAD
+                    <img src="images/profile.jpg" alt="Profile Picture" class="profile-picture">
+                    <h2>John Doe</h2>
+=======
                     <img src="images/Profile-test.jfif" alt="Profile Picture" class="profile-picture">
                     <h2>Julia Grey</h2>
                     <p>Chief Editor</p>
+>>>>>>> a98e88e8b8907b5f547e15fcef61f81dc5aac263
                 </div>
                 <div class="profile-stats">
                     <div class="stat">
-                        <i class="fas fa-file-alt"></i>
-                        <span>Articles</span>
-                        <span>126</span>
+                        <h3>20</h3>
+                        <p>Courses</p>
                     </div>
                     <div class="stat">
-                        <i class="fas fa-star"></i>
-                        <span>Reviews</span>
-                        <span>1.37K</span>
+                        <h3>50</h3>
+                        <p>Notes</p>
+                    </div>
+                    <div class="stat">
+                        <h3>5</h3>
+                        <p>Alerts</p>
                     </div>
                 </div>
                 <div class="latest-alerts">
@@ -134,8 +143,8 @@
                     <div class="alert-item">
                         <img src="images/alert1.png" alt="Alert Image">
                         <div>
-                            <h3>Calculus</h3>
-                            <p>5 hours ago</p>
+                            <h3>Exam Coming Up</h3>
+                            <p>4 hours ago</p>
                         </div>
                     </div>
                     <div class="alert-item">
@@ -156,14 +165,5 @@
             </div>
         </aside>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth'
-            });
-            calendar.render();
-        });
-    </script>
 </body>
 </html>
