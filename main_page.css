@@ -458,5 +458,14 @@ nav ul li:hover a {
 ::-webkit-scrollbar-thumb:hover {
     background: #555; /* Color de fondo del control deslizante al pasar el mouse */
 }
+.enter-btn {
+    background-color: #00c853;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
 
 
