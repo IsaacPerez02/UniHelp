@@ -337,7 +337,7 @@ header .user-info {
     align-items: center;
 }
 
-header .user-info .username {
+header .user-info .username {       
     margin-right: 10px;
 }
 
@@ -437,4 +437,26 @@ nav ul li:hover {
 nav ul li:hover a {
     color: #fff; /* Change link color on hover */
 }
+
+/* Esto aplica el estilo a toda la barra de desplazamiento */
+::-webkit-scrollbar {
+    width: 10px; /* Ancho de la barra de desplazamiento */
+}
+
+/* Esto aplica el estilo al 'track' o riel de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+    background: #333; /* Color de fondo del riel */
+}
+
+/* Esto aplica el estilo al 'thumb' o control deslizante de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color de fondo del control deslizante */
+    border-radius: 5px; /* Redondea las esquinas del control deslizante */
+}
+
+/* Cambia el color del 'thumb' cuando se pasa el mouse por encima */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color de fondo del control deslizante al pasar el mouse */
+}
+
 
