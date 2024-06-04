@@ -6,34 +6,84 @@
     <title>UniHelp My Profile</title>
     <link rel="stylesheet" href="main_page.css">
     <script defer src="main_page.js"></script>
+    <style>
+        .profile-container {
+            background-color: #2c2c2c;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .profile-container h2 {
+            color: #fff;
+        }
+
+        .profile-container label {
+            color: #fff;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .profile-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .profile-container button {
+            background-color: #00c853;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <aside class="sidebar">
-            <div class="logo">UniHelp</div>
-            <nav>
-                <ul>
-                    <li><a href="main_page.html">Dashboard</a></li>
-                    <li><a href="mycourses.html">My Courses</a></li>
-                    <li><a href="foro.html">Forums</a></li>
-                    <li><a href="chat.html">Chat</a></li>
-                    <li><a href="myprofile.html" class="nav-link">My Profile</a></li>
-                </ul>
-            </nav>
-            <div class="premium">
-                <button>Activate Premium</button>
-            </div>
-        </aside>
-        <main class="main-content">
-            <header>
-                <h1>My Profile</h1>
-            </header>
-            <!-- My Profile content goes here -->
-        </main>
-    </div>
+<div class="container">
+    <main class="main-content">
+        <header>
+            <h1>My Profile</h1>
+        </header>
+        <div class="profile-container">
+            <h2>Profile Information</h2>
+            <form id="profileForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" value="Manuel Lopez" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="manuel.lopez@example.com" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter new password" required>
+
+                <button type="button" onclick="saveProfile()">Save Changes</button>
+            </form>
+        </div>
+    </main>
+</div>
+<script>
+    function saveProfile() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const text = `Name: ${name}\nEmail: ${email}\nPassword: ${password}`;
+        const blob = new Blob([text], { type: 'text/plain' });
+        const anchor = document.createElement('a');
+        anchor.download = 'profile.txt';
+        anchor.href = window.URL.createObjectURL(blob);
+        anchor.target = '_blank';
+        anchor.style.display = 'none'; // This element is not visible on the page
+        document.body.appendChild(anchor);
+        anchor.click();
+        document.body.removeChild(anchor);
+    }
+</script>
 </body>
 </html>
-
-
-
-
